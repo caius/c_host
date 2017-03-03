@@ -2,7 +2,18 @@
 
 Experimenting with calling out to a shared library from C binary.
 
-`make` then `./host ./plugin.so`
+For the C shared lib:
+
+    make
+    ./host ./plugin.so
+
+For the Rust shared lib:
+
+    make
+    cd plugin
+    cargo build --release
+    cd -
+    ./host ./plugin/target/release/libplugin.dylib
 
 ## License
 

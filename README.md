@@ -2,7 +2,7 @@
 
 Experimenting with calling out to a shared library from C binary.
 
-`make` then `./host`
+`make` then `./host ./plugin.so`
 
 ## License
 

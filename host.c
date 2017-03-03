@@ -11,9 +11,12 @@ int main (int argc, char const *argv[])
   void *plugin_handle = NULL;
   lib_func hurrow = NULL;
 
-  printf("Oh hai\n");
+  char *lib_path = argv[1];
 
-  plugin_handle = dlopen("./plugin.so", RTLD_NOW);
+  printf("Oh hai\n");
+  printf("Loading %s\n", lib_path);
+
+  plugin_handle = dlopen(lib_path, RTLD_NOW);
   if (!plugin_handle) {
       fprintf(stderr, "Error during dlopen(): %s\n", dlerror());
       exit(1);
